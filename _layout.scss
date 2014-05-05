@@ -9,14 +9,17 @@
 
 // Predefine the variables below in order to alter and enable specific features.
 $tree-layout-gutter:          $tree-base-spacing-unit !default;
-$tree-layout-gutter--small:   false !default;
-$tree-layout-gutter--large:   false !default;
-$tree-layout-gutter--flush:   false !default;
-$tree-layout-gutter--rev:     false !default;
-$tree-layout-gutter--middle:  false !default;
-$tree-layout-gutter--bottom:  false !default;
-$tree-layout-gutter--right:   false !default;
-$tree-layout-gutter--center:  false !default;
+$tree-layout-gutter--small:   halve($tree-layout-gutter) !default;
+$tree-layout-gutter--large:   double($tree-layout-gutter) !default;
+
+$tree-layout-layout--small:   false !default;
+$tree-layout-layout--large:   false !default;
+$tree-layout-layout--flush:   false !default;
+$tree-layout-layout--rev:     false !default;
+$tree-layout-layout--middle:  false !default;
+$tree-layout-layout--bottom:  false !default;
+$tree-layout-layout--right:   false !default;
+$tree-layout-layout--center:  false !default;
 
 
 
