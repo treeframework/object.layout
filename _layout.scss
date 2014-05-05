@@ -90,7 +90,7 @@ $tree-global-border-box: false !default;
     %#{$tree-namespace}layout--large {
         margin-left: -($tree-layout-gutter--large);
 
-        > .#($tree-namespace)layout__item,
+        > .#{$tree-namespace}layout__item,
         > %#{$tree-namespace}layout__item {
             padding-left: $tree-layout-gutter--large;
         }
