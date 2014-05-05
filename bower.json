@@ -1,0 +1,19 @@
+{
+  "name": "tree-layout",
+  "version": "0.1.0",
+  "homepage": "https://github.com/treeframework/object.layout",
+  "authors": [
+    "ILia Kolev <treeframework@iliakolev.com>"
+  ],
+  "description": "TreeFramework - simple layout abstraction.",
+  "main": "_layout.scss",
+  "keywords": [
+    "TreeFramework",
+    "css"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "tree-defaults": "~0.1.0",
+    "tree-functions": "~0.1.0"
+  }
+}
