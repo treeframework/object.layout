@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "homepage": "https://github.com/treeframework/object.layout",
   "authors": [
-    "ILia Kolev <treeframework@iliakolev.com>"
+    "Ilia Kolev <treeframework@iliakolev.com>"
   ],
   "description": "TreeFramework - simple layout abstraction.",
   "main": "_layout.scss",
