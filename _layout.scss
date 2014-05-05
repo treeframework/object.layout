@@ -43,26 +43,26 @@ $tree-global-border-box: false !default;
     margin-left: -$tree-layout-gutter;
 }
 
-    // 1. Cause columns to stack side-by-side.
-    // 2. Space columns apart.
-    // 3. Align columns to the tops of each other.
-    // 4. Full-width unless told to behave otherwise.
-    // 5. Require to combine fluid widths and fixed gutters.
-    .#{$tree-namespace}layout__item,
-    %#{$tree-namespace}layout__item {
-        display: inline-block; // [1]
-        padding-left: $tree-layout-gutter; // [2]
-        vertical-align: top; // [3]
-        width: 100%; // [4]
+// 1. Cause columns to stack side-by-side.
+// 2. Space columns apart.
+// 3. Align columns to the tops of each other.
+// 4. Full-width unless told to behave otherwise.
+// 5. Require to combine fluid widths and fixed gutters.
+.#{$tree-namespace}layout__item,
+%#{$tree-namespace}layout__item {
+    display: inline-block; // [1]
+    padding-left: $tree-layout-gutter; // [2]
+    vertical-align: top; // [3]
+    width: 100%; // [4]
 
 
-        @if $tree-global-border-box == false {
-            -webkit-box-sizing: border-box; // [5]
-               -moz-box-sizing: border-box; // [5]
-                    box-sizing: border-box; // [5]
-        }
-
+    @if $tree-global-border-box == false {
+        -webkit-box-sizing: border-box; // [5]
+           -moz-box-sizing: border-box; // [5]
+                box-sizing: border-box; // [5]
     }
+
+}
 
 
 
