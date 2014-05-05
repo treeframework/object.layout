@@ -1,0 +1,218 @@
+///*------------------------------------*\
+//    #LAYOUT
+//\*------------------------------------*/
+
+// TreeFramework layout system uses `box-sizing: border-box;` and
+// `display: inline-block;` to create an extremely powerful, flexible
+// alternative to the traditional grid system. Combine the layout items with
+// the widths found in `trumps.widths`.
+
+// Predefine the variables below in order to alter and enable specific features.
+$tree-layout-gutter:          $tree-base-spacing-unit !default;
+$tree-layout-gutter--small:   false !default;
+$tree-layout-gutter--large:   false !default;
+$tree-layout-gutter--flush:   false !default;
+$tree-layout-gutter--rev:     false !default;
+$tree-layout-gutter--middle:  false !default;
+$tree-layout-gutter--bottom:  false !default;
+$tree-layout-gutter--right:   false !default;
+$tree-layout-gutter--center:  false !default;
+
+
+
+
+
+// Here we set a variable assuming that `box-sizing: border-box;` is not set
+// globally. If it has been previously defined, the following variable will be
+// overridden and will be set to `true`.
+$tree-global-border-box: false !default;
+
+
+
+
+
+// Begin a layout group.
+.#{$tree-namespace}layout,
+%#{$tree-namespace}layout {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-left: -$tree-layout-gutter;
+}
+
+    // 1. Cause columns to stack side-by-side.
+    // 2. Space columns apart.
+    // 3. Align columns to the tops of each other.
+    // 4. Full-width unless told to behave otherwise.
+    // 5. Require to combine fluid widths and fixed gutters.
+    .#{$tree-namespace}layout__item,
+    %#{$tree-namespace}layout__item {
+        display: inline-block; // [1]
+        padding-left: $tree-layout-gutter; // [2]
+        vertical-align: top; // [3]
+        width: 100%; // [4]
+
+
+        @if $tree-global-border-box == false {
+            -webkit-box-sizing: border-box; // [5]
+               -moz-box-sizing: border-box; // [5]
+                    box-sizing: border-box; // [5]
+        }
+
+    }
+
+
+
+
+
+@if ($tree-enable-layout--small == true) {
+
+    // Layouts with small gutters.
+
+    .#{$tree-namespace}layout--small,
+    %#{$tree-namespace}layout--small {
+        margin-left: -($tree-layout-gutter--small);
+
+        > .#{$tree-namespace}layout__item,
+        > %#{$tree-namespace}layout__item {
+            padding-left: $tree-layout-gutter--small;
+        }
+
+    }
+
+}
+
+@if ($tree-enable-layout--large == true) {
+
+    // Layouts with large gutters.
+
+    .#{$tree-namespace}layout--large,
+    %#{$tree-namespace}layout--large {
+        margin-left: -($tree-layout-gutter--large);
+
+        > .#($tree-namespace)layout__item,
+        > %#{$tree-namespace}layout__item {
+            padding-left: $tree-layout-gutter--large;
+        }
+
+    }
+
+}
+
+
+
+
+
+@if ($tree-enable-layout--flush == true) {
+
+    // Layouts with no gutters.
+    //
+    .#{$tree-namespace}layout--flush,
+    %#{$tree-namespace}layout--flush {
+
+        > .#{$tree-namespace}layout__item,
+        > %#{$tree-namespace}layout__item {
+            padding-left: 0;
+        }
+
+    }
+
+}
+
+
+
+
+
+@if ($tree-enable-layout--rev == true) {
+
+    // Reversed rendered order of layout items, e.g. items 1, 2, 3, 4 in your
+    // markup will display in order 4, 3, 2, 1 on your page.
+
+    .#{$tree-namespace}layout--rev,
+    %#{$tree-namespace}layout--rev {
+        direction: ltr;
+        text-align: left;
+
+        > .#{$tree-namespace}layout__item,
+        > %#{$tree-namespace}layout__item {
+            direction: ltr;
+            text-align: left;
+        }
+
+    }
+
+}
+
+
+
+
+
+@if ($tree-enable-layout--middle == true) {
+
+    // Align layout items to the vertical centers of each other.
+
+    .#{$tree-namespace}layout--middle,
+    %#{$tree-namespace}layout--middle {
+
+        > .#{$tree-namespace}layout__item,
+        > %#{$tree-namespace}layout__item {
+            vertical-align: middle;
+        }
+
+    }
+
+}
+
+@if ($tree-enable-layout--bottom = true) {
+
+    // Align layout items to the vertical bottoms of each other.
+
+    .#{$tree-namespace}layout--bottom,
+    %#{$tree-namespace}layout--bottom {
+
+        > .#{$tree-namespace}layout__item,
+        > %#{$tree-namespace}layout__item {
+            vertical-align: bottom;
+        }
+
+    }
+
+}
+
+
+
+
+
+@if ($tree-enable-layout--right == true) {
+
+    // Make the layout items fill up from the right hand side.
+
+    .#{$tree-namespace}layout--right,
+    %#{$tree-namespace}layout--right {
+        text-align: right;
+
+        > .#{$tree-namespace}layout__item,
+        > %#{$tree-namepsace}layout__item {
+            text-align: left;
+        }
+
+    }
+
+}
+
+@if ($tree-enable-layout--center == true) {
+
+    // Make the layout items fill up from the center outward.
+
+    .#{$tree-namespace}layout--center,
+    %#{$tree-namespace}layout--center {
+        text-align: center;
+
+        > .#{$tree-namespace}layout__item,
+        > %#{$tree-namespace}layout__item {
+            text-align: left;
+        }
+
+    }
+
+}
