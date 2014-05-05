@@ -166,7 +166,7 @@ $tree-global-border-box: false !default;
 
 }
 
-@if ($tree-enable-layout--bottom = true) {
+@if ($tree-enable-layout--bottom == true) {
 
     // Align layout items to the vertical bottoms of each other.
 
