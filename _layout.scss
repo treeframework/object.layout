@@ -12,14 +12,14 @@ $tree-layout-gutter:          $tree-base-spacing-unit !default;
 $tree-layout-gutter--small:   halve($tree-layout-gutter) !default;
 $tree-layout-gutter--large:   double($tree-layout-gutter) !default;
 
-$tree-layout-layout--small:   false !default;
-$tree-layout-layout--large:   false !default;
-$tree-layout-layout--flush:   false !default;
-$tree-layout-layout--rev:     false !default;
-$tree-layout-layout--middle:  false !default;
-$tree-layout-layout--bottom:  false !default;
-$tree-layout-layout--right:   false !default;
-$tree-layout-layout--center:  false !default;
+$tree-enable-layout--small:   false !default;
+$tree-enable-layout--large:   false !default;
+$tree-enable-layout--flush:   false !default;
+$tree-enable-layout--rev:     false !default;
+$tree-enable-layout--middle:  false !default;
+$tree-enable-layout--bottom:  false !default;
+$tree-enable-layout--right:   false !default;
+$tree-enable-layout--center:  false !default;
 
 
 
