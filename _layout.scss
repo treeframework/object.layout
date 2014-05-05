@@ -57,9 +57,7 @@ $tree-global-border-box: false !default;
 
 
     @if $tree-global-border-box == false {
-        -webkit-box-sizing: border-box; // [5]
-           -moz-box-sizing: border-box; // [5]
-                box-sizing: border-box; // [5]
+        box-sizing: border-box; // [5]
     }
 
 }
