@@ -106,7 +106,7 @@ $tree-global-border-box: false !default;
 @if ($tree-enable-layout--flush == true) {
 
     // Layouts with no gutters.
-    //
+
     .#{$tree-namespace}layout--flush,
     %#{$tree-namespace}layout--flush {
 
