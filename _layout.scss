@@ -131,7 +131,7 @@ $tree-global-border-box: false !default;
 
     .#{$tree-namespace}layout--rev,
     %#{$tree-namespace}layout--rev {
-        direction: ltr;
+        direction: rtl;
         text-align: left;
 
         > .#{$tree-namespace}layout__item,
