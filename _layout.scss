@@ -1,6 +1,8 @@
-///*------------------------------------*\
-//    #LAYOUT
-//\*------------------------------------*/
+// *************************************
+//
+//   #LAYOUT
+//
+// *************************************
 
 // TreeFramework layout system uses `box-sizing: border-box;` and
 // `display: inline-block;` to create an extremely powerful, flexible
@@ -20,6 +22,7 @@ $tree-enable-layout--middle:  false !default;
 $tree-enable-layout--bottom:  false !default;
 $tree-enable-layout--right:   false !default;
 $tree-enable-layout--center:  false !default;
+$tree-enable-layout--auto:    false !default;
 
 
 
@@ -212,6 +215,26 @@ $tree-global-border-box: false !default;
         > .#{$tree-namespace}layout__item,
         > %#{$tree-namespace}layout__item {
             text-align: left;
+        }
+
+    }
+
+}
+
+
+
+
+
+@if ($tree-enable-layout--auto == true) {
+
+    // Cause layout items to take up a non-explicit amount of width.
+
+    .#{$tree-namespace}layout--auto,
+    %#{$tree-namespace}layout--auto {
+
+        > .#{$tree-namespace}layout__item,
+        > %#{$tree-namespace}layout__item {
+            width: auto;
         }
 
     }
