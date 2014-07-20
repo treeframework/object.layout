@@ -10,6 +10,8 @@
 // the widths found in `trumps.widths`.
 
 // Predefine the variables below in order to alter and enable specific features.
+$tree-layout-namespace:       $tree-namespace !default;
+
 $tree-layout-gutter:          $tree-base-spacing-unit !default;
 $tree-layout-gutter--small:   halve($tree-layout-gutter) !default;
 $tree-layout-gutter--large:   double($tree-layout-gutter) !default;
@@ -38,8 +40,8 @@ $tree-global-border-box: false !default;
 
 
 // Begin a layout group.
-.#{$tree-namespace}layout,
-%#{$tree-namespace}layout {
+.#{$tree-layout-namespace}layout,
+%#{$tree-layout-namespace}layout {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -51,8 +53,8 @@ $tree-global-border-box: false !default;
 // 3. Align columns to the tops of each other.
 // 4. Full-width unless told to behave otherwise.
 // 5. Require to combine fluid widths and fixed gutters.
-.#{$tree-namespace}layout__item,
-%#{$tree-namespace}layout__item {
+.#{$tree-layout-namespace}layout__item,
+%#{$tree-layout-namespace}layout__item {
     display: inline-block; // [1]
     padding-left: $tree-layout-gutter; // [2]
     vertical-align: top; // [3]
@@ -73,12 +75,12 @@ $tree-global-border-box: false !default;
 
     // Layouts with small gutters.
 
-    .#{$tree-namespace}layout--small,
-    %#{$tree-namespace}layout--small {
+    .#{$tree-layout-namespace}layout--small,
+    %#{$tree-layout-namespace}layout--small {
         margin-left: -($tree-layout-gutter--small);
 
-        > .#{$tree-namespace}layout__item,
-        > %#{$tree-namespace}layout__item {
+        > .#{$tree-layout-namespace}layout__item,
+        > %#{$tree-layout-namespace}layout__item {
             padding-left: $tree-layout-gutter--small;
         }
 
@@ -90,12 +92,12 @@ $tree-global-border-box: false !default;
 
     // Layouts with large gutters.
 
-    .#{$tree-namespace}layout--large,
-    %#{$tree-namespace}layout--large {
+    .#{$tree-layout-namespace}layout--large,
+    %#{$tree-layout-namespace}layout--large {
         margin-left: -($tree-layout-gutter--large);
 
-        > .#{$tree-namespace}layout__item,
-        > %#{$tree-namespace}layout__item {
+        > .#{$tree-layout-namespace}layout__item,
+        > %#{$tree-layout-namespace}layout__item {
             padding-left: $tree-layout-gutter--large;
         }
 
@@ -111,11 +113,11 @@ $tree-global-border-box: false !default;
 
     // Layouts with no gutters.
 
-    .#{$tree-namespace}layout--flush,
-    %#{$tree-namespace}layout--flush {
+    .#{$tree-layout-namespace}layout--flush,
+    %#{$tree-layout-namespace}layout--flush {
 
-        > .#{$tree-namespace}layout__item,
-        > %#{$tree-namespace}layout__item {
+        > .#{$tree-layout-namespace}layout__item,
+        > %#{$tree-layout-namespace}layout__item {
             padding-left: 0;
         }
 
@@ -132,13 +134,13 @@ $tree-global-border-box: false !default;
     // Reversed rendered order of layout items, e.g. items 1, 2, 3, 4 in your
     // markup will display in order 4, 3, 2, 1 on your page.
 
-    .#{$tree-namespace}layout--rev,
-    %#{$tree-namespace}layout--rev {
+    .#{$tree-layout-namespace}layout--rev,
+    %#{$tree-layout-namespace}layout--rev {
         direction: rtl;
         text-align: left;
 
-        > .#{$tree-namespace}layout__item,
-        > %#{$tree-namespace}layout__item {
+        > .#{$tree-layout-namespace}layout__item,
+        > %#{$tree-layout-namespace}layout__item {
             direction: ltr;
             text-align: left;
         }
@@ -155,11 +157,11 @@ $tree-global-border-box: false !default;
 
     // Align layout items to the vertical centers of each other.
 
-    .#{$tree-namespace}layout--middle,
-    %#{$tree-namespace}layout--middle {
+    .#{$tree-layout-namespace}layout--middle,
+    %#{$tree-layout-namespace}layout--middle {
 
-        > .#{$tree-namespace}layout__item,
-        > %#{$tree-namespace}layout__item {
+        > .#{$tree-layout-namespace}layout__item,
+        > %#{$tree-layout-namespace}layout__item {
             vertical-align: middle;
         }
 
@@ -171,11 +173,11 @@ $tree-global-border-box: false !default;
 
     // Align layout items to the vertical bottoms of each other.
 
-    .#{$tree-namespace}layout--bottom,
-    %#{$tree-namespace}layout--bottom {
+    .#{$tree-layout-namespace}layout--bottom,
+    %#{$tree-layout-namespace}layout--bottom {
 
-        > .#{$tree-namespace}layout__item,
-        > %#{$tree-namespace}layout__item {
+        > .#{$tree-layout-namespace}layout__item,
+        > %#{$tree-layout-namespace}layout__item {
             vertical-align: bottom;
         }
 
@@ -191,12 +193,12 @@ $tree-global-border-box: false !default;
 
     // Make the layout items fill up from the right hand side.
 
-    .#{$tree-namespace}layout--right,
-    %#{$tree-namespace}layout--right {
+    .#{$tree-layout-namespace}layout--right,
+    %#{$tree-layout-namespace}layout--right {
         text-align: right;
 
-        > .#{$tree-namespace}layout__item,
-        > %#{$tree-namespace}layout__item {
+        > .#{$tree-layout-namespace}layout__item,
+        > %#{$tree-layout-namespace}layout__item {
             text-align: left;
         }
 
@@ -208,12 +210,12 @@ $tree-global-border-box: false !default;
 
     // Make the layout items fill up from the center outward.
 
-    .#{$tree-namespace}layout--center,
-    %#{$tree-namespace}layout--center {
+    .#{$tree-layout-namespace}layout--center,
+    %#{$tree-layout-namespace}layout--center {
         text-align: center;
 
-        > .#{$tree-namespace}layout__item,
-        > %#{$tree-namespace}layout__item {
+        > .#{$tree-layout-namespace}layout__item,
+        > %#{$tree-layout-namespace}layout__item {
             text-align: left;
         }
 
@@ -229,11 +231,11 @@ $tree-global-border-box: false !default;
 
     // Cause layout items to take up a non-explicit amount of width.
 
-    .#{$tree-namespace}layout--auto,
-    %#{$tree-namespace}layout--auto {
+    .#{$tree-layout-namespace}layout--auto,
+    %#{$tree-layout-namespace}layout--auto {
 
-        > .#{$tree-namespace}layout__item,
-        > %#{$tree-namespace}layout__item {
+        > .#{$tree-layout-namespace}layout__item,
+        > %#{$tree-layout-namespace}layout__item {
             width: auto;
         }
 
