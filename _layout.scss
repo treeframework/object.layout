@@ -10,21 +10,25 @@
 // the widths found in `trumps.widths`.
 
 // Predefine the variables below in order to alter and enable specific features.
-$tree-layout-namespace:       $tree-namespace !default;
+$tree-layout-namespace:        $tree-namespace !default;
 
-$tree-layout-gutter:          $tree-base-spacing-unit !default;
-$tree-layout-gutter--small:   halve($tree-layout-gutter) !default;
-$tree-layout-gutter--large:   double($tree-layout-gutter) !default;
+$tree-layout-gutter:           $tree-base-spacing-unit !default;
+$tree-layout-gutter--tiny:       quarter($tree-layout-gutter) !default;
+$tree-layout-gutter--small:        halve($tree-layout-gutter) !default;
+$tree-layout-gutter--large:       double($tree-layout-gutter) !default;
+$tree-layout-gutter--huge:     quadruple($tree-layout-gutter) !default;
 
-$tree-enable-layout--small:   false !default;
-$tree-enable-layout--large:   false !default;
-$tree-enable-layout--flush:   false !default;
-$tree-enable-layout--rev:     false !default;
-$tree-enable-layout--middle:  false !default;
-$tree-enable-layout--bottom:  false !default;
-$tree-enable-layout--right:   false !default;
-$tree-enable-layout--center:  false !default;
-$tree-enable-layout--auto:    false !default;
+$tree-enable-layout--tiny:     false !default;
+$tree-enable-layout--small:    false !default;
+$tree-enable-layout--large:    false !default;
+$tree-enable-layout--huge:     false !default;
+$tree-enable-layout--flush:    false !default;
+$tree-enable-layout--rev:      false !default;
+$tree-enable-layout--middle:   false !default;
+$tree-enable-layout--bottom:   false !default;
+$tree-enable-layout--right:    false !default;
+$tree-enable-layout--center:   false !default;
+$tree-enable-layout--auto:     false !default;
 
 
 
@@ -67,9 +71,22 @@ $tree-global-border-box: false !default;
 
 }
 
+@if ($tree-enable-layout--tiny == true) {
 
+    // Layouts with tiny gutters.
 
+    .#{$tree-layout-namespace}layout--tiny,
+    %#{$tree-layout-namespace}layout--tiny {
+        margin-left: -($tree-layout-gutter--tiny);
 
+        > .#{$tree-layout-namespace}layout__item,
+        > %#{$tree-layout-namespace}layout__item {
+            padding-left: $tree-layout-gutter--tiny;
+        }
+
+    }
+
+}
 
 @if ($tree-enable-layout--small == true) {
 
@@ -99,6 +116,40 @@ $tree-global-border-box: false !default;
         > .#{$tree-layout-namespace}layout__item,
         > %#{$tree-layout-namespace}layout__item {
             padding-left: $tree-layout-gutter--large;
+        }
+
+    }
+
+}
+
+@if ($tree-enable-layout--large == true) {
+
+    // Layouts with large gutters.
+
+    .#{$tree-layout-namespace}layout--large,
+    %#{$tree-layout-namespace}layout--large {
+        margin-left: -($tree-layout-gutter--large);
+
+        > .#{$tree-layout-namespace}layout__item,
+        > %#{$tree-layout-namespace}layout__item {
+            padding-left: $tree-layout-gutter--large;
+        }
+
+    }
+
+}
+
+@if ($tree-enable-layout--huge == true) {
+
+    // Layouts with huge gutters.
+
+    .#{$tree-layout-namespace}layout--large,
+    %#{$tree-layout-namespace}layout--large {
+        margin-left: -($tree-layout-gutter--huge);
+
+        > .#{$tree-layout-namespace}layout__item,
+        > %#{$tree-layout-namespace}layout__item {
+            padding-left: $tree-layout-gutter--huge;
         }
 
     }
