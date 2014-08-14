@@ -1,10 +1,10 @@
 {
   "name": "tree-layout",
-  "version": "0.3.7",
+  "version": "0.3.8",
   "homepage": "https://github.com/treeframework/object.layout",
   "authors": [
     "Harry Roberts <harry@csswizardry.com>",
-    "Ilia Kolev <contact@iliakolev.com>"
+    "Ilia Kolev <info@iliakolev.com>"
   ],
   "description": "Simple layout abstraction.",
   "main": "_layout.scss",
