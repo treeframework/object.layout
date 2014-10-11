@@ -1,19 +1,22 @@
 {
   "name": "tree-layout",
-  "version": "0.3.8",
+  "version": "0.3.9",
   "homepage": "https://github.com/treeframework/object.layout",
   "authors": [
     "Harry Roberts <harry@csswizardry.com>",
     "Ilia Kolev <info@iliakolev.com>"
   ],
   "description": "Simple layout abstraction.",
-  "main": "_layout.scss",
+  "main": "_object.layout.scss",
+  "ignore": [
+    "*.md"
+  ],
   "keywords": [
     "css"
   ],
   "license": "Apache",
   "dependencies": {
-    "tree-defaults": "latest",
-    "tree-functions": "latest"
+    "tree-defaults": "~0.2.4",
+    "tree-functions": "~0.2.4"
   }
 }
