@@ -122,23 +122,6 @@ $tree-global-border-box: false !default;
 
 }
 
-@if ($tree-enable-layout--large == true) {
-
-    // Layouts with large gutters.
-
-    .#{$tree-layout-namespace}layout--large,
-    %#{$tree-layout-namespace}layout--large {
-        margin-left: -($tree-layout-gutter--large);
-
-        > .#{$tree-layout-namespace}layout__item,
-        > %#{$tree-layout-namespace}layout__item {
-            padding-left: $tree-layout-gutter--large;
-        }
-
-    }
-
-}
-
 @if ($tree-enable-layout--huge == true) {
 
     // Layouts with huge gutters.
