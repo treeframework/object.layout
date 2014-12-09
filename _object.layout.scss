@@ -126,8 +126,8 @@ $tree-global-border-box: false !default;
 
     // Layouts with huge gutters.
 
-    .#{$tree-layout-namespace}layout--large,
-    %#{$tree-layout-namespace}layout--large {
+    .#{$tree-layout-namespace}layout--huge,
+    %#{$tree-layout-namespace}layout--huge {
         margin-left: -($tree-layout-gutter--huge);
 
         > .#{$tree-layout-namespace}layout__item,
