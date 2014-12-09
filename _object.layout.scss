@@ -149,6 +149,7 @@ $tree-global-border-box: false !default;
 
     .#{$tree-layout-namespace}layout--flush,
     %#{$tree-layout-namespace}layout--flush {
+        margin-left: 0;
 
         > .#{$tree-layout-namespace}layout__item,
         > %#{$tree-layout-namespace}layout__item {
