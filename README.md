@@ -6,7 +6,15 @@ traditional grid system. It is based on
 
 Install using Bower:
 
-    $ bower install --save tree-layout
+```sh
+$ bower install tree-layout --save
+```
+
+Install using npm:
+
+```sh
+$ npm install tree-layout --save
+```
 
 ## Credits
 
