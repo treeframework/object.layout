@@ -1,7 +1,7 @@
 {
   "name": "tree-layout",
   "description": "A simple layout abstraction.",
-  "version": "0.3.13",
+  "version": "0.4.0",
   "author": "Ilia Kolev <info@iliakolev.com>",
   "bugs": {
     "url": "https://github.com/treeframework/object.layout/issues"
@@ -12,8 +12,8 @@
   },
   "homepage": "https://github.com/treeframework/object.layout",
   "keywords": [
-    "oocss",
-    "css"
+    "css",
+    "oocss"
   ],
   "license": "MIT",
   "main": "_object.layout.scss",
