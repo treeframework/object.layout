@@ -6,7 +6,7 @@ traditional grid system. It is based on
 
 ## Dependencies
 
-The `layout` object depends on two other module:
+The `layout` object depends on two other modules:
 
 * [settings.defaults](https://github.com/treeframework/settings.defaults)
 * [tools.functions](https://github.com/treeframework/tools.functions)
