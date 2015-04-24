@@ -1,7 +1,7 @@
 {
   "name": "tree-layout",
   "description": "A simple layout abstraction.",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "author": "Ilia Kolev <info@iliakolev.com>",
   "bugs": {
     "url": "https://github.com/treeframework/object.layout/issues"
