@@ -23,8 +23,8 @@
 // Markup:
 //
 // <div class="o-layout">
-//     <div class="o-layout__item  1/2">...</div><!--
-//  --><div class="o-layout__item  1/2">...</div>
+//     <div class="o-layout__item  u-1/2">...</div><!--
+//  --><div class="o-layout__item  u-1/2">...</div>
 // </div>
 //
 // =============================================================================
@@ -58,10 +58,6 @@ $tree-enable-layout--right:    false !default;
 $tree-enable-layout--center:   false !default;
 $tree-enable-layout--auto:     false !default;
 
-
-
-
-
 // Here we set a variable assuming that `box-sizing: border-box;` is not set
 // globally. If it has been previously defined, the following variable will be
 // overridden and will be set to `true`.
@@ -76,8 +72,7 @@ $tree-global-border-box: false !default;
 // Begin a layout group.
 // =============================================================================
 
-.#{$tree-layout-namespace}o-layout,
-%#{$tree-layout-namespace}o-layout {
+.#{$tree-layout-namespace}o-layout {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -92,8 +87,8 @@ $tree-global-border-box: false !default;
     // 3. Align columns to the tops of each other.
     // 4. Full-width unless told to behave otherwise.
     // 5. Require to combine fluid widths and fixed gutters.
-    .#{$tree-layout-namespace}o-layout__item,
-    %#{$tree-layout-namespace}o-layout__item {
+
+    .#{$tree-layout-namespace}o-layout__item {
         display: inline-block; // [1]
         padding-left: $tree-layout-gutter; // [2]
         vertical-align: top; // [3]
@@ -117,12 +112,10 @@ $tree-global-border-box: false !default;
     // Layouts with tiny gutters.
     // =========================================================================
 
-    .#{$tree-layout-namespace}o-layout--tiny,
-    %#{$tree-layout-namespace}o-layout--tiny {
+    .#{$tree-layout-namespace}o-layout--tiny {
         margin-left: -($tree-layout-gutter--tiny);
 
-        > .#{$tree-layout-namespace}o-layout__item,
-        > %#{$tree-layout-namespace}o-layout__item {
+        > .#{$tree-layout-namespace}o-layout__item {
             padding-left: $tree-layout-gutter--tiny;
         }
 
@@ -136,12 +129,10 @@ $tree-global-border-box: false !default;
     // Layouts with small gutters.
     // =========================================================================
 
-    .#{$tree-layout-namespace}o-layout--small,
-    %#{$tree-layout-namespace}o-layout--small {
+    .#{$tree-layout-namespace}o-layout--small {
         margin-left: -($tree-layout-gutter--small);
 
-        > .#{$tree-layout-namespace}o-layout__item,
-        > %#{$tree-layout-namespace}o-layout__item {
+        > .#{$tree-layout-namespace}o-layout__item {
             padding-left: $tree-layout-gutter--small;
         }
 
@@ -155,12 +146,10 @@ $tree-global-border-box: false !default;
     // Layouts with large gutters.
     // =========================================================================
 
-    .#{$tree-layout-namespace}o-layout--large,
-    %#{$tree-layout-namespace}o-layout--large {
+    .#{$tree-layout-namespace}o-layout--large {
         margin-left: -($tree-layout-gutter--large);
 
-        > .#{$tree-layout-namespace}o-layout__item,
-        > %#{$tree-layout-namespace}o-layout__item {
+        > .#{$tree-layout-namespace}o-layout__item {
             padding-left: $tree-layout-gutter--large;
         }
 
@@ -174,12 +163,10 @@ $tree-global-border-box: false !default;
     // Layouts with huge gutters.
     // =========================================================================
 
-    .#{$tree-layout-namespace}o-layout--huge,
-    %#{$tree-layout-namespace}o-layout--huge {
+    .#{$tree-layout-namespace}o-layout--huge {
         margin-left: -($tree-layout-gutter--huge);
 
-        > .#{$tree-layout-namespace}o-layout__item,
-        > %#{$tree-layout-namespace}o-layout__item {
+        > .#{$tree-layout-namespace}o-layout__item {
             padding-left: $tree-layout-gutter--huge;
         }
 
@@ -197,12 +184,10 @@ $tree-global-border-box: false !default;
     // Layouts with no gutters.
     // =========================================================================
 
-    .#{$tree-layout-namespace}o-layout--flush,
-    %#{$tree-layout-namespace}o-layout--flush {
+    .#{$tree-layout-namespace}o-layout--flush {
         margin-left: 0;
 
-        > .#{$tree-layout-namespace}o-layout__item,
-        > %#{$tree-layout-namespace}o-layout__item {
+        > .#{$tree-layout-namespace}o-layout__item {
             padding-left: 0;
         }
 
@@ -221,13 +206,11 @@ $tree-global-border-box: false !default;
     // markup will display in order 4, 3, 2, 1 on your page.
     // =========================================================================
 
-    .#{$tree-layout-namespace}o-layout--rev,
-    %#{$tree-layout-namespace}o-layout--rev {
+    .#{$tree-layout-namespace}o-layout--rev {
         direction: rtl;
         text-align: left;
 
-        > .#{$tree-layout-namespace}o-layout__item,
-        > %#{$tree-layout-namespace}o-layout__item {
+        > .#{$tree-layout-namespace}o-layout__item {
             direction: ltr;
             text-align: left;
         }
@@ -246,11 +229,9 @@ $tree-global-border-box: false !default;
     // Align layout items to the vertical centers of each other.
     // =========================================================================
 
-    .#{$tree-layout-namespace}o-layout--middle,
-    %#{$tree-layout-namespace}o-layout--middle {
+    .#{$tree-layout-namespace}o-layout--middle {
 
-        > .#{$tree-layout-namespace}o-layout__item,
-        > %#{$tree-layout-namespace}o-layout__item {
+        > .#{$tree-layout-namespace}o-layout__item {
             vertical-align: middle;
         }
 
@@ -264,11 +245,9 @@ $tree-global-border-box: false !default;
     // Align layout items to the vertical bottoms of each other.
     // =========================================================================
 
-    .#{$tree-layout-namespace}o-layout--bottom,
-    %#{$tree-layout-namespace}o-layout--bottom {
+    .#{$tree-layout-namespace}o-layout--bottom {
 
-        > .#{$tree-layout-namespace}o-layout__item,
-        > %#{$tree-layout-namespace}o-layout__item {
+        > .#{$tree-layout-namespace}o-layout__item {
             vertical-align: bottom;
         }
 
@@ -286,12 +265,10 @@ $tree-global-border-box: false !default;
     // Make the layout items fill up from the right hand side.
     // =========================================================================
 
-    .#{$tree-layout-namespace}o-layout--right,
-    %#{$tree-layout-namespace}o-layout--right {
+    .#{$tree-layout-namespace}o-layout--right {
         text-align: right;
 
-        > .#{$tree-layout-namespace}o-layout__item,
-        > %#{$tree-layout-namespace}o-layout__item {
+        > .#{$tree-layout-namespace}o-layout__item {
             text-align: left;
         }
 
@@ -303,14 +280,12 @@ $tree-global-border-box: false !default;
 
     // Modifier: `o-layout--center`
     // Make the layout items fill up from the center outward.
-    // =============================================================================
+    // =========================================================================
 
-    .#{$tree-layout-namespace}o-layout--center,
-    %#{$tree-layout-namespace}o-layout--center {
+    .#{$tree-layout-namespace}o-layout--center {
         text-align: center;
 
-        > .#{$tree-layout-namespace}o-layout__item,
-        > %#{$tree-layout-namespace}o-layout__item {
+        > .#{$tree-layout-namespace}o-layout__item {
             text-align: left;
         }
 
@@ -326,13 +301,11 @@ $tree-global-border-box: false !default;
 
     // Modifier: `o-layout--auto`
     // Cause layout items to take up a non-explicit amount of width.
-    // =============================================================================
+    // =========================================================================
 
-    .#{$tree-layout-namespace}o-layout--auto,
-    %#{$tree-layout-namespace}o-layout--auto {
+    .#{$tree-layout-namespace}o-layout--auto {
 
-        > .#{$tree-layout-namespace}o-layout__item,
-        > %#{$tree-layout-namespace}o-layout__item {
+        > .#{$tree-layout-namespace}o-layout__item {
             width: auto;
         }
 
