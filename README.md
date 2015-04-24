@@ -49,8 +49,8 @@ Basic usage of the `layout` object uses the required classes:
 
 ```html
 <div class="o-layout">
-    <div class="o-layout__item  1/2">...</div><!--
- --><div class="o-layout__item  1/2">...</div>
+    <div class="o-layout__item  u-1/2">...</div><!--
+ --><div class="o-layout__item  u-1/2">...</div>
 </div>
 ```
 
@@ -73,8 +73,8 @@ For example:
 
 ```html
 <div class="o-layout  o-layout--middle">
-    <div class="o-layout__item  1/2">I’m in the middle!</div><!--
- --><div class="o-layout__item  1/2">I’m in the middle!</div>
+    <div class="o-layout__item  u-1/2">I’m in the middle!</div><!--
+ --><div class="o-layout__item  u-1/2">I’m in the middle!</div>
 </div>
 ```
 
