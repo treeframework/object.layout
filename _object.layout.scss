@@ -61,6 +61,7 @@ $tree-enable-layout--auto:     false !default;
 // Here we set a variable assuming that `box-sizing: border-box;` is not set
 // globally. If it has been previously defined, the following variable will be
 // overridden and will be set to `true`.
+
 $tree-global-border-box: false !default;
 
 
@@ -69,8 +70,9 @@ $tree-global-border-box: false !default;
 
 // =============================================================================
 // Block: `o-layout`
-// Begin a layout group.
 // =============================================================================
+
+// Begin a layout group.
 
 .#{$tree-layout-namespace}o-layout {
     list-style: none;
@@ -109,8 +111,9 @@ $tree-global-border-box: false !default;
 @if ($tree-enable-layout--tiny == true) {
 
     // Modifier: `o-layout--tiny`
-    // Layouts with tiny gutters.
     // =========================================================================
+
+    // Layouts with tiny gutters.
 
     .#{$tree-layout-namespace}o-layout--tiny {
         margin-left: -($tree-layout-gutter--tiny);
@@ -126,8 +129,9 @@ $tree-global-border-box: false !default;
 @if ($tree-enable-layout--small == true) {
 
     // Modifier: `o-layout--small`
-    // Layouts with small gutters.
     // =========================================================================
+
+    // Layouts with small gutters.
 
     .#{$tree-layout-namespace}o-layout--small {
         margin-left: -($tree-layout-gutter--small);
@@ -143,8 +147,9 @@ $tree-global-border-box: false !default;
 @if ($tree-enable-layout--large == true) {
 
     // Modifier: `o-layout--large`
-    // Layouts with large gutters.
     // =========================================================================
+
+    // Layouts with large gutters.
 
     .#{$tree-layout-namespace}o-layout--large {
         margin-left: -($tree-layout-gutter--large);
@@ -160,8 +165,9 @@ $tree-global-border-box: false !default;
 @if ($tree-enable-layout--huge == true) {
 
     // Modifier: `o-layout--huge`
-    // Layouts with huge gutters.
     // =========================================================================
+
+    // Layouts with huge gutters.
 
     .#{$tree-layout-namespace}o-layout--huge {
         margin-left: -($tree-layout-gutter--huge);
@@ -181,8 +187,9 @@ $tree-global-border-box: false !default;
 @if ($tree-enable-layout--flush == true) {
 
     // Modifier: `o-layout--flush`
-    // Layouts with no gutters.
     // =========================================================================
+
+    // Layouts with no gutters.
 
     .#{$tree-layout-namespace}o-layout--flush {
         margin-left: 0;
@@ -202,9 +209,10 @@ $tree-global-border-box: false !default;
 @if ($tree-enable-layout--rev == true) {
 
     // Modifier: `o-layout--rev`
+    // =========================================================================
+
     // Reversed rendered order of layout items, e.g. items 1, 2, 3, 4 in your
     // markup will display in order 4, 3, 2, 1 on your page.
-    // =========================================================================
 
     .#{$tree-layout-namespace}o-layout--rev {
         direction: rtl;
@@ -226,8 +234,9 @@ $tree-global-border-box: false !default;
 @if ($tree-enable-layout--middle == true) {
 
     // Modifier: `o-layout--middle`
-    // Align layout items to the vertical centers of each other.
     // =========================================================================
+
+    // Align layout items to the vertical centers of each other.
 
     .#{$tree-layout-namespace}o-layout--middle {
 
@@ -242,8 +251,9 @@ $tree-global-border-box: false !default;
 @if ($tree-enable-layout--bottom == true) {
 
     // Modifier: `o-layout--bottom`
-    // Align layout items to the vertical bottoms of each other.
     // =========================================================================
+
+    // Align layout items to the vertical bottoms of each other.
 
     .#{$tree-layout-namespace}o-layout--bottom {
 
@@ -262,8 +272,9 @@ $tree-global-border-box: false !default;
 @if ($tree-enable-layout--right == true) {
 
     // Modifier: `o-layout--right`
-    // Make the layout items fill up from the right hand side.
     // =========================================================================
+
+    // Make the layout items fill up from the right hand side.
 
     .#{$tree-layout-namespace}o-layout--right {
         text-align: right;
@@ -279,8 +290,9 @@ $tree-global-border-box: false !default;
 @if ($tree-enable-layout--center == true) {
 
     // Modifier: `o-layout--center`
-    // Make the layout items fill up from the center outward.
     // =========================================================================
+
+    // Make the layout items fill up from the center outward.
 
     .#{$tree-layout-namespace}o-layout--center {
         text-align: center;
@@ -300,8 +312,9 @@ $tree-global-border-box: false !default;
 @if ($tree-enable-layout--auto == true) {
 
     // Modifier: `o-layout--auto`
-    // Cause layout items to take up a non-explicit amount of width.
     // =========================================================================
+
+    // Cause layout items to take up a non-explicit amount of width.
 
     .#{$tree-layout-namespace}o-layout--auto {
 
